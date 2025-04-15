@@ -1,0 +1,74 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* hero.css */
+
+.hero-container {
+    gap: 2rem;
+    transition: gap 0.3s ease-in-out;
+}
+
+.profile-image-large {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.profile-image-small {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Styles applied when scrolled */
+.fixed.top-0 .hero-container {
+    gap: 1rem;
+    /* Adjust gap for navbar */
+}
+
+.fixed.top-0 .profile-image-large {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    /* Fade out large image */
+}
+
+.fixed.top-0 .profile-image-small {
+    opacity: 1;
+    /* Fade in small image */
+}
+
+/* Adjust text and button sizes when scrolled */
+.fixed.top-0 h1 {
+    font-size: 1.5rem !important;
+    /* Override inline style */
+    margin-bottom: 0.5rem !important;
+}
+
+.fixed.top-0 h2 {
+    font-size: 0.9rem !important;
+    /* Override inline style */
+}
+
+.fixed.top-0 button {
+    font-size: 0.8rem !important;
+    /* Override inline style */
+    padding: 0.5rem 1rem !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure small image is initially hidden */
+.profile-image-small {
+    opacity: 0;
+}
+
+/* When not scrolled, ensure large image is visible */
+.profile-image-large {
+    opacity: 1;
+}
